@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>对象属性---constructor 属性返回对创建此对象的数组函数的引用。</title>
+</head>
+<body>
+  <script>
+    // constructor 属性返回对创建此对象的数组函数的引用。
+     var array = []
+    if (array.constructor === Array) {
+      document.write('this is a Array       ')
+      document.write('<br>')
+    } else if (array.constructor === Object) {
+      document.write('this is a Objet         ')
+      document.write('<br>')
+    } else if (array.constructor === Boolean) {
+      document.write('this is a Boolean      ')
+      document.write('<br>')
+    } else if (array.constructor === Date) {
+      document.write('this is a Date        ')
+      document.write('<br>')
+    } else {
+      document.wirte('this is a string       ')
+      document.write('<br>')
+    }
+
+    function employee (name, job, born) {
+      this.name = name
+      this.job = job
+      this.born = born
+    }
+    var man = new employee ('張三', '程序媛', 1998)
+    document.write(man.constructor)
+  </script>
+</body>
+</html>
+

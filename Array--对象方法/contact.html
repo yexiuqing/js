@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var arr = []
+    arr[0] = 'zhangsan'
+    arr[1] = 'lisi'
+    arr[2] = 'wangwu'
+
+    var num = []
+    num[0] = 1
+    num[1] = 2
+    num[3] = 3
+
+    var atr = []
+    atr[0] = 'a'
+    atr[1] = 'b'
+    atr[2] = 'c'
+    atr[3] = 'd'
+
+    document.write(atr.concat(arr))
+    document.write('</br>')
+    document.write(atr.concat(arr, num))
+    document.write('</br>')
+    document.write(atr.concat('!', 'a'))
+  </script>
+</body>
+</html>

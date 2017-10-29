@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对象属性---prototype 属性使您有能力向对象添加属性和方法</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function employee (name, job, born) {
+      this.name = name
+      this.job = job
+      this.bon = born
+    }
+    var man = new employee('zhangsan', 'Engineer', 1978)
+    employee.prototype.srlary = null
+    man.salary = 10000
+    document.write(man.salary)
+  </script>
+</body>
+</html>
