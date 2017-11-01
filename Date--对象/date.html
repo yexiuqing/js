@@ -44,6 +44,15 @@
     document.write('更改当前月当前天的日期' + date)
     document.write('</br>')
     document.write('更改月份' + d.setMonth(0, 20) + '为圣诞节') //?
+
+    function employee (name, job, born)
+    {
+      this.name = name
+      this.job = job
+      this.born = born
+    }
+    var bill = new employee ('Bill Gates', 'Engineer', 1985)
+    document.write(bill.toSource())
   </script>
 </body>
 </html>
