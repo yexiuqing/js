@@ -1,42 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+  <meta charset='UTF-8'>
+  <title>Document</title>
 </head>
 <body>
-	<b>hahahahah</b>
-	<i>hahahahaah</i>
-	<script type="text/javascript">
-		var a = "ajfhdshfdsfdshf"
-		document.write(a.blink())
-		document.write('<hr/>')
-		document.write(a.charAt(2))
-		document.write('<hr/>')
-		document.write(a.big())
-		document.write('<hr/>')
-		document.write(a.fontcolor("Red"))
-		document.write('<hr/>')
-		document.write(a.indexOf('dsh'))
-		document.write('<hr/>')
-		document.write(a.lastIndexOf('dsh'))
-		document.write('<hr/>')
-		document.write(a.slice(1.4))
-		document.write('<hr/>')
-		document.write(a.substr(3))
-		document.write('<hr/>')
-		document.write(a.toLocaleLowerCase())
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
-		document.write('<hr/>')
+  <b>hahahahah</b>
+  <i>hahahahaah</i>
+  <script type='text/javascript'>
+    var a = 'ajfhdshfdsfdshf'
+    document.write(a.blink())
+    document.write('<hr/>')
+    document.write(a.charAt(2))
+    document.write('<hr/>')
+    document.write(a.big())
+    document.write('<hr/>')
+    document.write(a.fontcolor('Red'))
+    document.write('<hr/>')
+    document.write(a.indexOf('dsh'))
+    document.write('<hr/>')
+    document.write(a.lastIndexOf('dsh'))
+    document.write('<hr/>')
+    document.write(a.slice(1.4))
+    document.write('<hr/>')
+    document.write(a.substr(3))
+    document.write('<hr/>')
+    document.write(a.toLocaleLowerCase())
+    document.write('<hr/>')
 
-	</script>
+    var str = 'Hello world!'
+    var str1 = 'fhdhfdkdshfdsfhdsjfh'
+    document.write(str.indexOf('Hello') + '<br />')
+    document.write(str.indexOf('World') + '<br />')
+    document.write(str.indexOf('world'))
+    document.write('<hr/>')
+    document.write(str1.indexOf('s') + '<br />')
+    document.write('<hr/>')
+    document.write(str1.lastIndexOf('s') + '<br />')
+    document.write('<hr/>')
+    document.write(str.link('http://www.w3school.com.cn'))
+    document.write('<hr/>')
+    document.write(str.match('world') + '<br />')
+    document.write(str.match('World') + '<br />')
+    document.write(str.match('worlld') + '<br />')
+    document.write(str.match('world!'))
+    document.write('<hr/>')
+    document.write(str.replace(/world/, 'tomorrow'))
+    document.write('<hr/>')
+    var str2 = 'Welcome to Microsoft! '
+    str2 = str2 + 'We are proud to announce that Microsoft has '
+    str2 = str2 + 'one of the largest Web Developers sites in the world.'
+    document.write(str2.replace(/Microsoft/g, 'today'))
+    document.write('<hr/>')
+    var text = 'javascript Tutorial'
+    text.replace(/javascript/i, 'JavaScript')
+    document.write(text.replace(/javascript/i, 'JavaScript'))
+    document.write('<hr/>')
+    // 包括开始不包括结束
+    document.write('包括开始不包括结束' + '<br />')
+    document.write(str1.slice(6, 11) + '<br/>')
+    document.write(str1.slice(9))
+    document.write('<hr/>')
+    var arr = []
+    arr = str1.split('')
+    document.write(arr)
+    document.write('<hr/>')
+    document.write(str1.strike())
+    document.write('<hr/>')
+    document.write('AAAbbb' + str1.sub())
+    document.write('<hr/>')
+    document.write(str1.substring(2, 9))
+    document.write('<hr/>')
+    document.write()
+    document.write('<hr/>')
+    document.write()
+    document.write('<hr/>')
+    document.write()
+    document.write('<hr/>')
+    document.write('<hr/>')
+    document.write('<hr/>')
+    document.write('<hr/>')
+    document.write('<hr/>')
+
+  </script>
 </body>
 </html>
