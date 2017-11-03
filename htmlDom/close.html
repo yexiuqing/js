@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="Has 'myWindow' been closed?" onclick="checkWin()">
+  <script type="text/javascript">
+ function ifClosed () {
+    document.write("'myWindow' has been closed!")
+  }
+  function ifNotClosed () {
+    document.write("'myWindow' has not been closed!")
+  }
+
+  function checkWin () {
+    if (myWindow.closed)
+      ifClosed()
+    else
+      ifNotClosed()
+  }
+  myWindow =window.open('', '', 'width=200,height=100')
+  myWindow.document.write("This is 'myWindow'")
+</script>
+</body>
+</html>
