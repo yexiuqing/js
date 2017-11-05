@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #display{
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      top:10px;
+      background-color: yellow;
+      font-size: 12px;
+    }
+    body{
+      height: 17000px;
+      width: 17000px;
+    }
+  </style>
+  <script>
+    window.onload = function(event) {
+      var display = document.getElementById("display");
+      var ele = document.getElementById("secend");
+
+     window.onscroll = function () {
+
+        var rect = ele.getBoundingClientRect();
+
+        if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >=0 &&
+          rect.right  >=0  &&
+          rect.left<= (window.innerWidth || document.documentElement.clientWidth)) {
+          display.innerHTML = "div在可视范围";
+        } else {
+          display.innerHTML = "div不在可视范围";
+        }
+      }
+
+    }
+  </script>
+</head>
+<body>
+<div id="display"></div>
+<div id="first" style="height: 700px;width: 700px;background: green"></div>
+<div id="secend" style="height: 200px;width: 200px;background: red"></div>
+</body>
+</html>

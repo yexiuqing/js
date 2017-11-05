@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var arr1 = [1, 2, 3, '0', '2', '测试', '重复', NaN, false]
+    var arr2 = [3, '1', NaN, '重复', false]
+    function deleteDulArr (arr1, arr2) {
+      var arr = arr1.concat(arr2)
+      arr.sort()
+      var result = []
+      while (arr.length > 0) {
+        if (Object.is(arr[0], arr[1])) {
+          arr.shift()
+        } else {
+          result.push(arr.shift())
+        }
+      }
+      console.log(result)
+    }
+    deleteDulArr(arr1, arr2)
+  </script>
+
+</body>
+</html>
