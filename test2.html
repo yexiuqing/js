@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    body {
+      display: flex;
+      position: relative;
+    }
+    /*.block1 {
+      float: left;
+      width: 200px;
+      height: 600px;
+      background: #666;
+    }
+    .block2 {
+      float: right;
+      flex: 1;
+      height: 600px;
+      background: pink;
+    }*/
+    /*解法1*/
+/*    .block1 {
+      position: absolute;
+      left: 0;
+      width: 200px;
+      height: 600px;
+      background: #666;
+    }
+    .block2 {
+      float: right;
+      flex: 1;
+      height: 600px;
+      background: pink;
+    }*/
+    /*解法二*/
+    .block1 {
+      position: absolute;
+      left: 0;
+      width: 200px;
+      height: 600px;
+      background: #666;
+    }
+    .block2 {
+      margin-left: 200px;
+      width: 100%;
+      height: 600px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="block2">2</div>
+  <div class="block1">1</div>
+</body>
+</html>

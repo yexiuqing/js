@@ -31,9 +31,7 @@
         var rect = ele.getBoundingClientRect();
 
         if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.bottom >=0 &&
-          rect.right  >=0  &&
-          rect.left<= (window.innerWidth || document.documentElement.clientWidth)) {
+          rect.bottom >=0 && rect.right  >=0  && rect.left <= (window.innerWidth || document.documentElement.clientWidth)) {
           display.innerHTML = "div在可视范围";
         } else {
           display.innerHTML = "div不在可视范围";
