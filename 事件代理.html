@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      list-style: none;
+    }
+    #parent-list li{
+      height: 40px;
+      width: 200px;
+      text-align: center;
+      border: solid 1px red
+    }
+  </style>
+</head>
+<body>
+  <ul id="parent-list">
+    <li id="post-1">item 01</li>
+    <li id="post-2">item 02</li>
+    <li id="post-3">item 03</li>
+    <li id="post-4">item 04</li>
+    <li id="post-5">item 05</li>
+    <li id="post-6">item 06</li>
+  </ul>
+  <script src="./jquery-2.1.3.min.js"></script>
+  <script>
+    // document.getElementById('parent-list').addEventListener('click', function(e) {
+    //   if(e.target && e.target.nodeName.toUpperCase() === 'LI') {
+    //     alert('list item',e.target.id.replace('post-'),'was clicked!')
+    //   }
+    // })
+    $('#parent-list').delegate('li', 'click', function(){
+      alert('you click ',$(this))
+    })
+  </script>
+</body>
+</html>

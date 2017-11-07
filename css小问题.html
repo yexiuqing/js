@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      position: relative;
+
+    }
+    span {
+      position: relative;
+      float: left;
+      top: 0;
+      bottom: 0;
+    }
+    .block1 {
+      width: 150px;
+      height: 50px;
+      background: #eee;
+    }
+    .block2 {
+      width: 160px;
+      height: 65px;
+      background: pink
+    }
+    .block3 {
+      width: 170px;
+      height: 96px;
+      background: red;
+    }
+    .block4 {
+      width: 170px;
+      height: 130px;
+      background: blue;
+    }
+    .block5 {
+      width: 180px;
+      height: 40px;
+      background: orange;
+    }
+    .wrapper{
+      position: relative;
+    }
+    .wrapper:after{
+      clear: both;
+      content: '';
+      display: table;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <span class="block1"></span>
+    <span class="block2"></span>
+    <span class="block3"></span>
+    <span class="block4"></span>
+    <span class="block5"></span>
+  </div>
+</body>
+</html>
