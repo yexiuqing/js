@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.a {
+			float: left;
+			width: 100px;
+			height: 100px;
+			border: dotted 3px red;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 100px;
+		}
+		.clear {
+			clear: both;
+		}
+		.b {
+			width: 100px;
+			height: 100px;
+			border: dotted 3px blue;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.module2 {
+			margin-top: 130px;
+		}
+		.module3 {
+			margin-top: -50px;
+			margin-bottom: -30px
+		}
+		.module4 {
+			margin-top: -40px
+		}
+		.father {
+			width: 200px;
+			height: 200px;
+			background: pink;
+			/*border: dotted 3px transparent;  //解决父子之间margin值重叠问题1、父元素加border*/
+			/*padding: 1px;		//解决父子之间margin值重叠问题2、父元素加padding*/
+			/*overflow: hidden;   解决父子之间margin值重叠问题3、父元素加overflow:hidden*/
+			
+			margin-bottom: 60px;
+			margin-top: 60px;
+		}
+		.child {
+			/*float: left; //解决父子之间margin值重叠问题4:子元素加float： left*/
+			/*display: inline-block; //解决父子之间margin值重叠问题5、子元素加display：inline-block*/
+			width : 100px;
+			height: 100px;
+			background: yellow;
+			margin-left: 50px;
+			margin-top: 50px;
+
+			/*margin-bottom: 50px;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="block1 a">001</div>
+	<div class="block2 a">002</div>
+	<div class="block3 a">003</div>
+	<div class="block4 a">004</div>
+	<div class="block5 a">005</div>
+	<div class="clear"></div>
+	<div class="module1 b">001</div>
+	<div class="module2 b">002</div>
+	<div class="module3 b">003</div>
+	<div class="module4 b">004</div>
+
+	<div class="father">
+		<div class="child"></div>
+	</div>
+</body>
+</html>
