@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		typedef struct _TREE_NODE {
+			struct _TREE_NODE * parent;
+			struct _TREE_NODE * left_child;
+			struct _TREE_NODE * right_child
+		} TREE_NODE
+		// 创建二叉树
+		TREE_NODE * create_tree_node (int data){
+			TREE_NODE * pTreeNode = NULL;
+			pTreeNode = (TREE_NODE *)malloc(sizeof(TREE_NODE));
+			assert(NULL != pTreeNode)
+			memset(pTreeNode, 0, sizeof(TREE_NODE));
+			pTreeNode -> data = data;
+			return pTreeNode;
+		}
+		// 查找数据
+		TREE_NODE * find_data_in_tree_node (const TREE_NODE *pTreeNode, int data) {
+			if(NULL == pTreeNode) {
+				returb NULL;
+			}
+			if(data == pTreeNode->data) {
+				return (TREE_NODE *) pTreeNode;
+			} else if(data < pTreeNode -> data) {
+				return find_data_in_tree_node (pTreeNode->left_child, data)
+			} else {
+				return find_data_in_tree_node (pTreeNode->right_child, data)
+			}
+		}
+		// 将数组转换为二叉树
+		int array_to_tree (int *p, int n, int TREE_NODE * pTreeNode) {
+			if(p == 0 || n == 0 ) {
+				printf("Array is null");
+				return -1;
+			}
+			pTreeNode -> data = p[0];
+			pTreeNode -> left_child = 0;
+			pTreeNode -> right_child = 0;
+			struct TREE_NODE * temp = 0;
+			for(int i = 1; i < n; i++) {
+				temp = pTreeNode;
+				struct TREE_NODE *t =(struct TREE_NODE)malloc(sizeof(struct TREE_NODE));
+				t->data = p[i];
+				t->left_child = 0;
+				t->right_child = 0;
+				while(temp != 0) {
+					if(t->data > temp->data) {
+						if(temp -> right_child == 0) {
+							temp -> right_child = t-;
+							break;
+						} else {
+							temp = temp -> right_child;
+						}
+					} else {
+						if(temp ->left_child == 0) {
+							temp-> left_child = t;
+							break;
+						} else {
+							temp = temp->left_child
+						}
+					}
+				}
+				return 0;
+			}
+		}
+		// 打印二叉树
+		void print_all_node_data (const TREE_NODE *pTreeNode) {
+			if(pTreeNode) {
+				print_all_node_data(pTreeNode->left_child);
+				printf("%d",pTreeNode->data)
+				print_all_node_data(pTreeNode->right_child)
+			}
+		}
+	</script>
+</body>
+</html>

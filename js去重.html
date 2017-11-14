@@ -2,28 +2,75 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>4中方法</title>
 </head>
 <body>
 	<script type="text/javascript">
-    Array.prototype.unique1 = function() {
-      var res = [this[0]]
-      for (var i = 1; i < this.length; i++) {
-        var repeat = false
-        for (var j = 0; j < res.length; j++) {
-          if (this[i] == res[j]) {
-            repeat = true
-            break
-          }
-        }
-        if (!repeat) {
-          res.push(this[i])
-        }
-      }
-      return res
+    // Array.prototype.unique1 = function() {
+    //   var res = [this[0]]
+    //   for (var i = 1; i < this.length; i++) {
+    //     var repeat = false
+    //     for (var j = 0; j < res.length; j++) {
+    //       if (this[i] == res[j]) {
+    //         repeat = true
+    //         break
+    //       }
+    //     }
+    //     if (!repeat) {
+    //       res.push(this[i])
+    //     }
+    //   }
+    //   return res
+    // }
+    // var arr = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0]
+    // alert(arr.unique1())
+    //第二种写法
+    // function unique (arr) {
+    //   var res = [arr[0]]
+    //   for (var i = 1; i < arr.length; i++) {
+    //     for (var j = 0; j < res.length; j++) {
+    //       if (arr[i] == res[j])
+    //         break
+    //     }
+    //     if (j === res.length) {
+    //       res.push(arr[i])
+    //     }
+    //   }
+    //   return res
+    // }
+    // 第三种写法
+    // function unique(arr) {
+    //   var res = []
+    //   var obj = {}
+    //   for (var i = 0; i < arr.length; i++) {
+    //     if(!obj[arr[i]]) {
+    //       obj[arr[i]] = true
+    //       res.push(arr[i])
+    //     }
+    //   }
+    //   return res
+    // }
+    // var arr = [1, 2, 4, 5, 'a', '2', 5, 1]
+    // console.log(unique(arr))
+
+    // 第四种写法
+    function unique(arr) {
+      var newArr = new Set(arr)
+      return Array.from(newArr)
     }
-    var arr = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0]
-    alert(arr.unique1())
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</script>
 </body>
 </html>
